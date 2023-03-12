@@ -1,0 +1,101 @@
+
+body{
+    background-color: rgb(245, 243, 214);
+    max-width: 90vh;
+    margin: 0.9rem auto;
+}
+
+/** header setting
+==============================**/
+.header-block-title{
+    font-size: 3rem;
+    text-align: center;
+    margin: 0.9rem auto;
+    font-weight: 900;
+}
+
+/** main setting
+==============================**/
+.main{
+    margin: 0 auto;
+    text-align: center;
+    border: 0.3rem solid #8f8b8b;
+    border-radius: 1rem;
+}
+.block-mem-label{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 4rem;
+    border-bottom: 0.3rem solid #8f8b8b;
+}
+.label-title{
+    font-size: 2rem;
+    font-weight: 900;
+    color: #3752b5;
+}
+.label-img{
+    display: block;
+    height: 100%;
+    width: 0;
+    transition: 0.7s ease-in-out;
+}
+.block-mem-input{
+    display: none;
+}
+.block-mem-content{
+    width: 0;
+    margin: 0 auto;
+    transition: 0.7s ease-in-out;
+}
+.content-img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.block-mem-input:hover~.block-mem-content{
+    width: 20rem;
+    margin: 1rem auto;
+}
+.block-mem-input:checked~.block-mem-content{
+    width: 20rem;
+    margin: 1rem auto;
+}
+.block-mem-input:hover ~ label .label-img{
+    transform: rotate(45deg);
+}
+.block-mem-input:checked ~ label .label-img{
+    transform: rotate(45deg);
+}
+.block-mem-input:checked ~ label .label-title{
+    color: #000000;
+}
+.main:hover .label-img{
+    width: 1.5rem;
+}
+.main:hover .label-title{
+    color: #000000;
+}
+
+/** footer setting
+==============================**/
+.footer{
+    background-color: #303030;
+    margin: 0 auto;
+}
+.footer-info{
+    width: 3rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+.footer-githab-img{
+    height: 7rem;
+}
+.footer-rs_school_js-img{
+    height: 4rem;
+}
+.footer-info-year{
+    font-size: 2rem;
+}
