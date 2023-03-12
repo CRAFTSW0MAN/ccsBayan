@@ -1,15 +1,23 @@
-
 body{
     background-color: rgb(245, 243, 214);
     max-width: 90vh;
-    margin: auto;
+    margin: 0 auto;
 }
-
+@media only screen and (max-width: 1920px) {
+    body{
+        max-width: 90vh;
+    }
+}
+@media only screen and (max-width: 1320px) {
+    body{
+        max-width: 100vh;
+    }
+}
 /** header setting
 ==============================**/
 .header-block-title{
     font-size: 4rem;
-    margin: auto;
+    margin:0 auto;
     font-weight: 900;
     padding: 1rem 3rem;
 }
@@ -17,7 +25,7 @@ body{
 /** main setting
 ==============================**/
 .main{
-    margin: auto;
+    margin: 0 auto;
     text-align: center;
     border: 0.3rem solid #8f8b8b;
     border-radius: 1rem;
@@ -25,12 +33,13 @@ body{
 }
 .block-mem{
     transition: 0.1s ease-in-out;
+    margin: 1rem auto;
 }
 .block-mem-label{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0.3rem 4rem;
+    margin: 0 4rem;
     padding: 1rem;
     border-radius: 1rem;
     background-color: rgb(255, 190, 144);
@@ -61,28 +70,29 @@ body{
 }
 .content-img{
     display: block;
-    width: 40%;
+    width: 30%;
     height: auto;
     cursor: pointer;
-    margin: 0 auto;
+    margin: 0.3rem auto;
 }
-.block-mem:active{
-    opacity: 0.65;
-}
-.block-mem-input:checked~.block-mem-content{
-    width: 100%;
-    margin: 1rem auto;
-}
+
 .block-mem-input:checked ~ label .label-img{
     transform: rotate(45deg);
 }
 .block-mem-input:checked ~ label .label-title{
     color: #000000;
 }
+.block-mem:active{
+    opacity: 0.65;
+}
+.block-mem-input:checked~.block-mem-content{
+    margin: 1rem auto 0;
+    width: 100%;
+}
 @media (hover: hover) {
-    .block-mem-input:hover~.block-mem-content{
-        width: 100%;
+    .block-mem:hover .block-mem-input~.block-mem-content{
         margin: 1rem auto;
+        width: 100%;
     }
     .block-mem-input:hover ~ label .label-img{
         transform: rotate(45deg);
@@ -92,6 +102,50 @@ body{
     }
     .main:hover .label-title{
         color: #000000;
+    }
+}
+@media only screen and (max-width: 1920px) {
+    .header-block-title{
+        font-size: 4rem;
+    }
+    .label-title{
+        font-size: 2rem;
+    }
+}
+@media only screen and (max-width: 1320px) {
+    .header-block-title{
+        font-size: 4rem;
+    }
+    .label-title{
+        font-size: 2rem;
+    }
+}
+@media only screen and (max-width: 820px) {
+    .header-block-title{
+        font-size: 3rem;
+    }
+    .label-title{
+        font-size: 1.5rem;
+    }
+    .content-img{
+        width: 50%;
+    }
+    .block-mem-label{
+        cursor: auto;
+    }
+    .block-mem-content{
+        cursor: auto;
+    }
+    .content-img{
+        cursor: auto;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .header-block-title{
+        font-size: 2.5rem;
+    }
+    .label-title{
+        font-size: 1.1rem;
     }
 }
 
