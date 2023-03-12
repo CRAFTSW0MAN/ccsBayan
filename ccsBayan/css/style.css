@@ -130,6 +130,9 @@ body{
     .content-img{
         width: 50%;
     }
+    .label-img{
+        width: 1.5rem;
+    }
     .block-mem-label{
         cursor: auto;
     }
@@ -146,6 +149,9 @@ body{
     }
     .label-title{
         font-size: 1.1rem;
+    }
+    .label-img{
+        width: 1rem;
     }
 }
 
