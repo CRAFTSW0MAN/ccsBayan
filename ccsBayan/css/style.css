@@ -2,37 +2,46 @@
 body{
     background-color: rgb(245, 243, 214);
     max-width: 90vh;
-    margin: 0.9rem auto;
+    margin: auto;
 }
 
 /** header setting
 ==============================**/
 .header-block-title{
-    font-size: 3rem;
-    text-align: center;
-    margin: 0.9rem auto;
+    font-size: 4rem;
+    margin: auto;
     font-weight: 900;
+    padding: 1rem 3rem;
 }
 
 /** main setting
 ==============================**/
 .main{
-    margin: 0 auto;
+    margin: auto;
     text-align: center;
     border: 0.3rem solid #8f8b8b;
     border-radius: 1rem;
+    padding: 1rem 0;
+}
+.block-mem{
+    transition: 0.1s ease-in-out;
 }
 .block-mem-label{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem 4rem;
-    border-bottom: 0.3rem solid #8f8b8b;
+    margin: 0.3rem 4rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: rgb(255, 190, 144);
+    cursor: pointer;
+
 }
 .label-title{
     font-size: 2rem;
     font-weight: 900;
-    color: #3752b5;
+    color: #989da9;
+    transition: 0.7s ease-in-out;
 }
 .label-img{
     display: block;
@@ -44,25 +53,25 @@ body{
     display: none;
 }
 .block-mem-content{
+    display: block;
     width: 0;
     margin: 0 auto;
     transition: 0.7s ease-in-out;
+    cursor: pointer;
 }
 .content-img{
     display: block;
-    width: 100%;
+    width: 40%;
     height: auto;
+    cursor: pointer;
+    margin: 0 auto;
 }
-.block-mem-input:hover~.block-mem-content{
-    width: 20rem;
-    margin: 1rem auto;
+.block-mem:active{
+    opacity: 0.65;
 }
 .block-mem-input:checked~.block-mem-content{
-    width: 20rem;
+    width: 100%;
     margin: 1rem auto;
-}
-.block-mem-input:hover ~ label .label-img{
-    transform: rotate(45deg);
 }
 .block-mem-input:checked ~ label .label-img{
     transform: rotate(45deg);
@@ -70,11 +79,20 @@ body{
 .block-mem-input:checked ~ label .label-title{
     color: #000000;
 }
-.main:hover .label-img{
-    width: 1.5rem;
-}
-.main:hover .label-title{
-    color: #000000;
+@media (hover: hover) {
+    .block-mem-input:hover~.block-mem-content{
+        width: 100%;
+        margin: 1rem auto;
+    }
+    .block-mem-input:hover ~ label .label-img{
+        transform: rotate(45deg);
+    }
+    .main:hover .label-img{
+        width: 1.5rem;
+    }
+    .main:hover .label-title{
+        color: #000000;
+    }
 }
 
 /** footer setting
@@ -84,18 +102,21 @@ body{
     margin: 0 auto;
 }
 .footer-info{
-    width: 3rem;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content:space-around;
     align-items: center;
 }
 .footer-githab-img{
-    height: 7rem;
+    display: block;
+    height: 5rem;
 }
 .footer-rs_school_js-img{
-    height: 4rem;
+    display: block;
+    height: 3rem;
 }
 .footer-info-year{
+    display: block;
     font-size: 2rem;
 }
